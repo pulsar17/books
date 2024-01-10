@@ -24,7 +24,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           yarn set version 1.22.18
-          yarn build --linux
+          yarn build --linux --publish always
 
       - name: Tar files
         run: tar -cvf dist-linux.tar dist_electron
